@@ -3,9 +3,9 @@ const app = express();
 const cors = require('cors');
 const routes = require('./routes/excelRoutes');
 app.use(cors())
-app.use(express.json())
+app.use(express())
 app.get('/.netlify/functions/api', (req, res) => {
-    res.json({ message: 'Hello, Netlify!' });
+    res.send({ message: 'Hello, Netlify!' });
   });  
 app.use('/.netlify/functions/api',routes);
 
