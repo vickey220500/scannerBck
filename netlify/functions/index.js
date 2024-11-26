@@ -7,7 +7,7 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.json({ message: 'Hello, Netlify!' });
   });  
-app.use('/api',routes);
+app.use('/.netlify/functions/api',routes);
 
 
 // const PORT = 3000;
